@@ -20,9 +20,9 @@ def load_parse(in_file, query):
         for rec in GFF.parse(in_handle, limit_info=limit_info):
             for generec in rec.features:
                 if generec.qualifiers['gene'][0] not in genes_to_locations:
-                    genes_to_locations[generec.qualifiers['gene'][0]] = [generec.location]
+                    genes_to_locations[generec.qualifiers['gene'][0]] = [str(generec.location)]
                 else:
-                    genes_to_locations[generec.qualifiers['gene'][0]].append(generec.location)
+                    genes_to_locations[generec.qualifiers['gene'][0]].append(str(generec.location))
                 
             
         in_handle.close()
