@@ -4,7 +4,8 @@ import os.path
 
 def load_parse(in_file, query):
     odirectory = "/data/"
-    ofilename = str(in_file) + ".json"
+    base=os.path.basename(in_file)
+    ofilename = base + ".json"
 
     genes_to_locations = dict()
 
