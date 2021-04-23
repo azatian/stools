@@ -6,7 +6,7 @@ from stools.utils import get_project_root
 root = get_project_root()
 
 def load_parse(in_file, query):
-    odirectory=str(root)+"/data/"
+    odirectory="/home/yazatian/projects/stools/data/"
     #odirectory = "/data/"
     base=os.path.basename(in_file)
     ofilename = base + ".json"
