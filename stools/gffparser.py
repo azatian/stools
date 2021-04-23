@@ -40,12 +40,17 @@ def load_parse(in_file, query):
         f.close()
     
     if query in genes_to_locations:
-        print(genes_to_locations[query])
+        nice_output(query, genes_to_locations[query])
     elif query.upper() in genes_to_locations:
-        print(genes_to_locations[query.upper()])
+        nice_output(query, genes_to_locations[query.upper()])
     elif query.lower() in genes_to_locations:
-        print(genes_to_locations[query.lower()])
+        nice_output(query, genes_to_locations[query.lower()])
     else:
         print("No match found")
 
+def nice_output(query, _output):
+    print("GENE SEARCH TERM: " + query)
+    print("COORDINATE(S) BELOW: ")
+    for x in _output:
+        print(x)
     
