@@ -10,7 +10,7 @@ def parse_arguments(args=None):
                         help='Track file to direct your gene query',
                         required=True)
 
-    parser.add_argument('--gene', 'g',
+    parser.add_argument('--gene', '-g',
                         help='Name of the gene you want to search, case-insensitive',
                         required=True)
     
