@@ -1,9 +1,13 @@
 from BCBio import GFF
 import json
 import os.path
+from stools.utils import get_project_root
+
+root = get_project_root()
 
 def load_parse(in_file, query):
-    odirectory = "/data/"
+    odirectory=root+"/data/"
+    #odirectory = "/data/"
     base=os.path.basename(in_file)
     ofilename = base + ".json"
 

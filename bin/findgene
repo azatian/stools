@@ -3,6 +3,7 @@
 import argparse
 import stools.gffparser as GFFParser
 
+
 def parse_arguments(args=None):
     parser = argparse.ArgumentParser("Search track file for a gene location and output it to the user")
 
