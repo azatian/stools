@@ -25,7 +25,7 @@ def load_parse(in_file, query):
         for rec in GFF.parse(in_handle, limit_info=limit_info):
             for generec in rec.features:
                 if generec.qualifiers['gene'][0] not in genes_to_locations:
-                    genes_to_locations[generec.qualifiers['gene'][0]] = [str(generec.location)]
+                    genes_to_locations[generec.qualifiers['gene'][0]] = [str(rec.id), str(generec.location)]
                 else:
                     genes_to_locations[generec.qualifiers['gene'][0]].append(str(generec.location))
                 
@@ -50,7 +50,11 @@ def load_parse(in_file, query):
 
 def nice_output(query, _output):
     print("GENE SEARCH TERM: " + query)
+    print("CHROMOSOME ID: " + _output[0])
     print("COORDINATE(S) BELOW: ")
+    counter = 0
     for x in _output:
-        print(x)
+        if counter != 0:
+            print(x)
+        counter = counter + 1
     
