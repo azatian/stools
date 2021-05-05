@@ -52,5 +52,11 @@ def nice_output(query, _output):
     print("GENE SEARCH TERM: " + query)
     print("COORDINATE(S) BELOW: ")
     for x in _output:
-        print(x[0] + "\t" + x[1])
+        if "NC_" in x[0]:
+            chrom = x[0].split("NC_")[-1].split(".")[0]
+            chrom = int(chrom)
+            locs = x[1].split("]")[0].split("[")[-1].split(":")
+            print(str(chrom) + ":" + locs[0] + "-" + locs[1])
+        else:
+            print(x[0] + "\t" + x[1])
     
