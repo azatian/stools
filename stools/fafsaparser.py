@@ -38,4 +38,4 @@ def save_fig(df, odirectory):
     fig.update_layout(title='Super Scaffold Components',
                    xaxis_title='Index',
                    yaxis_title='Count')
-    fig.write_image(odirectory)
+    fig.write_image(odirectory, width=1400, height=1000)
