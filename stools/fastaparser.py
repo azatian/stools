@@ -11,8 +11,8 @@ def loader(in_file):
         odirectory = os.path.dirname(in_file) + "/meta"
         if not os.path.exists(odirectory):
             os.makedirs(odirectory)
-        save_csv(df, odirectory+"/final_fafsa_meta.csv")
-        save_fig(df, odirectory+"/final_fafsa_meta.png")
+        save_csv(df, odirectory+"/final_fasta_meta.csv")
+        save_fig(df, odirectory+"/final_fasta_meta.png")
         print("DONE")
         return
     else:

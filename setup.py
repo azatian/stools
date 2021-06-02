@@ -8,5 +8,5 @@ setup(name='stools',
       version='1.0',
       # list folders, not files
       packages=['stools'],
-      scripts=['bin/findgene', 'bin/afafsa2meta']
+      scripts=['bin/findgene', 'bin/afasta2meta']
       )

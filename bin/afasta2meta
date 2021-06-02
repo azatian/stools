@@ -2,13 +2,13 @@
 #-*- coding: utf-8 -*-
 
 import argparse
-import stools.fafsaparser as FParser
+import stools.fastaparser as FParser
 
 def parse_arguments(args=None):
-    parser = argparse.ArgumentParser("Convert an output FAFSA file from HiCAssembler into a Meta CSV")
+    parser = argparse.ArgumentParser("Convert an output FASTA file from HiCAssembler into a Meta CSV")
 
-    parser.add_argument('--fafsa', '-f',
-                        help='The FAFSA file path as outputted by HiCAssembler',
+    parser.add_argument('--fasta', '-f',
+                        help='The FASTA file path as outputted by HiCAssembler',
                         required=True)
     
     return parser.parse_args(args)
