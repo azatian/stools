@@ -10,6 +10,11 @@ def parse_arguments(args=None):
     parser.add_argument('--fasta', '-f',
                         help='The FASTA file path as outputted by HiCAssembler',
                         required=True)
+
+    parser.add_argument('--assembler', '-a',
+                        help='Is the output FAFSA file coming from HiCAssembler output?',
+                        required=False,
+                        default="yes")
     
     return parser.parse_args(args)
 
@@ -17,7 +22,7 @@ def main(args):
     #need to call main function here
     #print(args.fafsa)
     #GFFParser.load_parse(args.trackFile, args.gene)
-    FParser.loader(args.fasta)
+    FParser.loader(args.fasta, args.assembler)
 
 
 
