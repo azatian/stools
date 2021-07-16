@@ -12,7 +12,7 @@ def parse_arguments(args=None):
                         required=True)
 
     parser.add_argument('--assembler', '-a',
-                        help='Is the output FAFSA file coming from HiCAssembler output?',
+                        help='Is the output FASTA file coming from HiCAssembler output?',
                         required=False,
                         default="yes")
     
