@@ -17,7 +17,7 @@ def main(args):
     #need to call main function here
     #print(args.fafsa)
     #GFFParser.load_parse(args.trackFile, args.gene)
-    FParser.loader(args.fafsa)
+    FParser.loader(args.fasta)
 
 
 
